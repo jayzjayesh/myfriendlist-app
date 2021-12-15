@@ -114,7 +114,7 @@ const MainApp = () => {
       if (searchValue.length > 0 && cacheFriendList.length > 0) {
         setIsSearching(true);
         const searchedFriendList = cacheFriendList.filter((item) =>
-          item.name.includes(searchValue)
+          item.name.toLowerCase().includes(searchValue.toLowerCase())
         );
         setFriendList([...searchedFriendList]);
       }
